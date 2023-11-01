@@ -1,0 +1,300 @@
+/*for general code*/
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+  :root {
+    --main-color:#F8F3E9;
+    --maincolor:rgb(10, 233, 233);
+    }
+  body{
+      font-family:serif;
+      background-color :var(--main-color);
+  }
+  
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  /*header*/
+     header .container{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+     }
+  .logo{
+    min-width: 100px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+
+  }
+  ul{
+   list-style: none;
+     }
+   header .fa-align-left{
+      display: none;
+     }
+     nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+   /*****************************************taieb css spicily***********************************************/
+   
+
+   nav  ul li a{ 
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase ;
+  }
+   
+   nav ul li .link-item{
+    position: relative;
+    padding: 10px 12px;
+    display: block;
+    font-weight: bold;
+    padding: 0 30px;
+  }
+   nav ul li .link-item::before{
+    content: "";
+    position: absolute;
+    border-width: 0px 2px;
+    border-color: var(--maincolor);
+    border-style: solid;
+    width: 97%;
+    height:100% ;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+    transform: scale3d(1,0,1);
+    transform-origin: top;
+  }
+  nav ul li .link-item:hover::before{
+    transform: scale3d(1,1,1);
+  
+  }
+  /* after*/
+  nav ul li .link-item::after{
+    content: "";
+    position: absolute;
+    border-width: 2px 0px; 
+    border-color: var(--maincolor);
+    border-style: solid;
+    width: 100%;
+    height: 93% ;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+    transition-delay: 0.2s;
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+  }
+  nav ul li .link-item:hover::after   {
+    transform: scale3d(1,1,1);
+  }
+  
+   .menu .home{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+     }
+  
+   /*************************************************************************************************************/
+    
+     .icons {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right:40px;
+      
+    } 
+    .icons li {
+      padding-left: 20px;
+      padding-right: 20px;
+      list-style:none;
+      cursor: pointer;
+   
+     }
+     .yourspace{
+      position: relative;
+     }
+     .icons ul::before{
+      content: "";
+      border-width:10px ;
+      border-style: solid;
+      border-color: transparent transparent  var(--maincolor) transparent;
+      position: absolute;
+      right:0;
+      top: -25px;
+  
+     }
+     .icons .yourspace{
+      border: 1px solid var(--maincolor);
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      background-color:var(--main-color);;
+      position: absolute;
+      min-width: 150px;
+      top: 95px;
+      display: none;
+      z-index: 999;
+     }
+     .icons ul a{
+      display:block;
+     padding: 10px 0px;
+      text-decoration: none;
+      color: black;
+      transition: 0.3s;
+     }
+     .icons ul a:hover{
+      padding: 5px;
+     }
+     .icons ul li:not(:last-child) a {
+     border-bottom:1px solid var(--maincolor) ;
+     }
+   .icons-s {
+      display: none;
+      padding-right:40px;
+      
+    } 
+    .icons-s li {
+      padding-left: 20px;
+      padding-right: 20px;
+      list-style:none;
+      cursor: pointer;
+   
+     }
+     .yourspace-s{
+      position: relative;
+     }
+     .icons-s ul::before{
+      content: "";
+      border-width:10px ;
+      border-style: solid;
+      border-color: transparent transparent  var(--maincolor) transparent;
+      position: absolute;
+      left:40px;
+      top: -35px;
+  
+     }
+     .icons-s .yourspace-s{
+      border: 1px solid var(--maincolor);
+      margin:0;
+      padding: 0 ;
+      text-decoration: none;
+      background-color:var(--main-color);;
+      position: absolute;
+      min-width: 150px;
+      top: 95px;
+      display: none;
+      z-index: 998;
+     }
+     .icons-s ul a{
+      display:block;
+     padding: 10px 0px;
+      text-decoration: none;
+      color: black;
+      transition: 0.3s;
+     }
+     .icons-s ul a:hover{
+      padding: 5px;
+     }
+     .icons-s ul li:not(:last-child) a {
+     border-bottom:1px solid var(--maincolor) ;
+     }
+    /*end of header*/
+  
+    /* gold-ring-with-shiny-diamond-stone-it */
+  
+  /* Small screens */
+ @media (max-width: 568px) {
+  *{
+    padding-left: 0;
+    margin-left: 0;
+  }
+  header {
+    margin-top: 20px;
+   }
+  nav ul li .link-item {
+    display:none;
+   }
+   header .icons-s {
+    display:block;
+   }
+  header .icons-s .fa-align-left{
+    display: block;
+    padding: 0px 30px 0px 40px;
+  
+   }
+   .logo{
+    min-width: 100px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+      }
+      .icons ul::before{
+        content: "";
+        border-width:10px ;
+        border-style: solid;
+        border-color: transparent transparent  var(--maincolor) transparent;
+        position: absolute;
+        right: 20px;
+        top: -35px;
+    
+       }
+      .icons .yourspace , .icons-s .yourspace-s{
+      
+        min-width:170px;
+      
+       }
+      .icons  , .icons-s {
+  
+        padding-left:60px;
+        
+      } 
+      .icons li , .icons-s li{
+        padding-left: 20px;
+        padding-right: 20px;
+        list-style:none;
+        cursor: pointer;
+     
+       }
+    
+      a {
+      font-size: x-large;
+      font-weight: bolder;
+       }
+  }
+  /* Medium screens */
+  @media (max-width: 992px) {
+   
+    
+  }
+  /* Large screens */
+  @media (max-width: 1200px) {
+   
+    
+  }
+  
+  
+  /* Extra-large screens */
+  
+  

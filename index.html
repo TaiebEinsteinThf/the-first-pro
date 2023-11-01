@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/figma.css">
+    <!-- i bring css code to normalize the page https://necolas.github.io/normalize.css/8.0.1/normalize.css -->
+    <link rel="stylesheet" href="css/normalaize.css">
+<link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,300;0,500;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<title>convert figma to web</title>
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="container">
+
+   <label class="logo">J-Shop</label>
+
+<nav class="menu"> 
+   
+   
+    <ul class="home">
+    <li><a class="link-item" href="#">Categories</a></li>
+    <li> <a class="link-item" href="#">About</a></li>
+    <li><a class="link-item" href="#">Shop</a></li>
+    <li> <a class="link-item" href="#">Contact</a></li>
+    </ul>
+   
+</nav><!-- end nav -->
+
+ <div class="icons-s">
+<i id="btnuser-s" class="fas fa-align-left fa-2x"></i>
+<ul class="yourspace-s">
+    <li><a class="link-item" href="#">Categories</a></li>
+    <li> <a class="link-item" href="#">About</a></li>
+    <li><a class="link-item" href="#">Shop</a></li>
+    <li> <a class="link-item" href="#">Contact</a></li>
+    </ul>
+</div>
+ 
+    <div class="icons">
+        <li><i class="fa fa-magnifying-glass "></i></li>
+        <li><i class="fa fa-cart-plus "></i></li>
+        <li><i id="btnuser" class="fa fa-user "></i></li>
+       
+    <ul class="yourspace">
+        <li><a href="#profile">profile</a></li>
+        <li> <a href="#paramater">parameter</a></li>
+        <li><a href="#yourscales">your scales</a></li>
+        <li> <a href="#chatwithus">chat with us</a></li>
+        </ul>
+    </div><!-- end icons -->
+<!-- js code for disply block the ul user -->
+    <script> 
+
+let yourspaces = document.querySelector(".yourspace-s");
+        let fa_userr = document.getElementById("btnuser-s");
+        let isVisiblee = false;
+    
+        fa_userr.addEventListener("click", function() {
+            if (isVisiblee) {
+                yourspaces.style.display = "none";
+            } else {
+                yourspaces.style.display = "block";
+            }
+            isVisiblee = !isVisiblee;
+        });
+
+        let yourspace = document.querySelector(".yourspace");
+        let fa_user = document.getElementById("btnuser");
+        let isVisible = false;
+    
+        fa_user.addEventListener("click", function() {
+            if (isVisible) {
+                yourspace.style.display = "none";
+            } else {
+                yourspace.style.display = "block";
+            }
+            isVisible = !isVisible;
+        });
+    </script><!-- my js for dropdown menu-->
+</div><!-- end container -->
+</header><!-- end header -->
+</body>
+</html>
