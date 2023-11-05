@@ -64,7 +64,7 @@
     padding: 10px 12px;
     display: block;
     font-weight: bold;
-    padding: 0 30px;
+    padding: 10px 30px;
   }
    nav ul li .link-item::before{
     content: "";
@@ -187,8 +187,8 @@
       border-style: solid;
       border-color: transparent transparent  var(--maincolor) transparent;
       position: absolute;
-      left:40px;
-      top: -35px;
+      left:80px;
+      top: -95px;
   
      }
      .icons-s .yourspace-s{
@@ -199,9 +199,10 @@
       background-color:var(--main-color);;
       position: absolute;
       min-width: 150px;
-      top: 95px;
+      top: -195px;
       display: none;
-      z-index: 998;
+      z-index: 999;
+
      }
      .icons-s ul a{
       display:block;
@@ -226,19 +227,25 @@
     padding-left: 0;
     margin-left: 0;
   }
-  header {
+  header .container{
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
    }
   nav ul li .link-item {
     display:none;
    }
    header .icons-s {
     display:block;
+  
    }
   header .icons-s .fa-align-left{
     display: block;
-    padding: 0px 30px 0px 40px;
+    margin-left: 80px;
   
+   }
+   header .theallin{
+    display:flex;
    }
    .logo{
     min-width: 100px;
@@ -257,18 +264,23 @@
         border-color: transparent transparent  var(--maincolor) transparent;
         position: absolute;
         right: 20px;
-        top: -35px;
+        top: -235px;
     
        }
-      .icons .yourspace , .icons-s .yourspace-s{
-      
+      .icons .yourspace {
+        min-width: 170px;
+        top:450px ;
+      }
+       .icons-s .yourspace-s{
+  
         min-width:170px;
+        top:250px;
       
        }
       .icons  , .icons-s {
-  
+
         padding-left:60px;
-        
+        margin-top: 40px;
       } 
       .icons li , .icons-s li{
         padding-left: 20px;
